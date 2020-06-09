@@ -1,0 +1,19 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. MAIN.
+
+       ENVIRONMENT DIVISION.
+
+       DATA DIVISION.
+       FILE SECTION.
+       WORKING-STORAGE SECTION.
+       77  N-PARAM PIC 9(5) VALUE 2.
+       77  SQRT-OUT PIC 9(5)V9(5).
+
+       PROCEDURE DIVISION.
+           DISPLAY 'aaa'.
+
+           CALL 'SQRT' USING N-PARAM, SQRT-OUT.
+           DISPLAY 'The SQRT of ' N-PARAM ' is ', SQRT-OUT.
+           DISPLAY SQRT-OUT, '<=='.
+           STOP RUN.
+       END PROGRAM MAIN.
